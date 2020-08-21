@@ -12,6 +12,7 @@
       "@config/*": ["config/*"],
       "@shared/*": ["shared/*"]
      },
+    "jsx": "preserve",
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
