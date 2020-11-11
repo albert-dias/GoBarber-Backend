@@ -3,7 +3,6 @@ import multer from 'multer';
 import uploadConfig from '@config/upload';
 
 import { celebrate, Joi, Segments } from 'celebrate';
-import { JoinAttribute } from 'typeorm/query-builder/JoinAttribute';
 import ensureAuthenticated from '../middlewares/ensureAuthenticated';
 import UsersController from '../controllers/UsersController';
 import UserAvatarController from '../controllers/UserAvatarController';
@@ -18,7 +17,7 @@ usersRouter.post(
   '/',
   celebrate({
     [Segments.BODY]: {
-      nome: Joi.string().required(),
+      name: Joi.string().required(),
       email: Joi.string().email().required(),
       password: Joi.string().required(),
     },
