@@ -9,6 +9,6 @@ const providers = {
 };
 
 container.registerSingleton<IStorageProvider>(
-  'MStorageProvider',
+  'StorageProvider',
   providers.disk,
 );
